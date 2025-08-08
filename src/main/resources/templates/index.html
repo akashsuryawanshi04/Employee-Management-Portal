@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h2>Employee Management Portal</h2>
+<a class="button button-add" th:href="@{/showNewEmployeeForm}">➕ Add New Employee</a>
+
+<br><br>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Designation</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="emp : ${listEmployees}">
+        <td th:text="${emp.id}"></td>
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.email}"></td>
+        <td th:text="${emp.department}"></td>
+        <td th:text="${emp.designation}"></td>
+        <td>
+            <a class="button button-edit" th:href="@{/showFormForUpdate/{id}(id=${emp.id})}">✏️ Edit</a>
+            <a class="button button-delete" th:href="@{/deleteEmployee/{id}(id=${emp.id})}">🗑️ Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
