@@ -7,8 +7,6 @@ This project is designed for beginners to learn **Spring Boot**, **Thymeleaf**, 
 
 ## 📸 Screenshots
 
-> *(Add your actual screenshots here after running the app)*
-
 **Home Page**
 ![Home Page](screenshots/home.png)
 
