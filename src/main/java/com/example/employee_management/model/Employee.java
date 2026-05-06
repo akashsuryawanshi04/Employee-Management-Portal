@@ -1,5 +1,5 @@
 package com.example.employee_management.model;
-
+ 
 import jakarta.persistence.*;
 
 @Entity
